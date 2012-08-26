@@ -15,4 +15,8 @@ group :development do
   gem 'liquid', '~> 2.3.0'
 end
 
+# gem 'guard-jasmine'
+# gem 'jasminerice'
+
+
 gem 'sinatra', '~> 1.3.2'

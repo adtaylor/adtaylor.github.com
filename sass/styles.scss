@@ -1,0 +1,14 @@
+body {
+  background-color: #eee;
+}
+
+.trinket {
+  position: absolute;
+  background-color: blue;
+  width: 1em;
+  height: 1em;
+}
+
+.trinket:nth-child(odd) {
+  background-color: red;
+}

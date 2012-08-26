@@ -1,0 +1,4 @@
+Background that the user can interact with
+   -> naming:
+      * background [cabinet ]
+        * items [ trinket  ]
