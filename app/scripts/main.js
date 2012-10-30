@@ -11,22 +11,25 @@ window.requestAnimFrame = (function(){
 
 $(document).ready(function(){
 
-  // $('pre').css( 'fontSize', $(window).width()*0.004 );
   var pre = $('pre'),
       prelength = pre.length,
-      i = 0;
+      i = y = 0;
 
   var render = function(){
-    if(i === prelength) i = 0;
+    if(i === (prelength-1)) i = 0;
     pre.hide().eq(i).show();
-    // var t = pre.eq(i).html();
-    // pre.html(t.split('<br>').splice(0,188).join('<br>'));
+    pre.css('color', 'rgba(255,0,0,' + (y*0.001) + ')');
+    // var t = pre.eq(i).html().split('<br>');
+    // var ts = t.splice(0,150);
+    // pre.eq(i).html(ts.join('<br>'));
     i++;
   };
 
   (function animloop(){
+    y++;
+    if(y%20 === 0) render();
+    if(y === 10000) y = 0;
     requestAnimFrame(animloop);
-    render();
   })();
 
 });
