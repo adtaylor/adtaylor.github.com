@@ -4,14 +4,15 @@ html, body, pre {
   padding: 0;
 }
 
-#bg {
+#bg pre { display:none; }
+#bg pre {
   position: absolute;
   top: -10px;
   left: 0;
   width: 100%;
   height: 100%;
 
-  font-size: 7px;
+  font-size: 5px;
   font-family: monospace;
   font-weight: bold;
 
