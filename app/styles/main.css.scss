@@ -1,0 +1,108 @@
+/*
+ * Lazy reset
+ */
+html, body, pre {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*
+ * Content block
+ */
+
+article{
+  position:relative;
+  width: 300px;
+  margin: 21px;
+  padding: 21px;
+  z-index: 2;
+  background-color: #fff;
+  color: #333;
+}
+
+
+h1,p,ul,li {
+  margin: 0 0 14px;
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+
+
+
+a {
+  padding: 2px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+$links: metaunion #f16651, twitter #fdc44f, dribbble #ea4c89, instagram #AEA3B8, flickr #3591E5, github #79d1b0;
+
+@each $link in $links {
+  a[href*="#{nth($link,1)}"] {
+    color: nth($link,2);
+    outline:0px solid nth($link,2);
+  }
+}
+
+a:hover, a:focus {
+  outline-width: 1px;
+}
+
+/*
+ * Background styles
+ */
+#bg {
+  /* font-size: 5px; */
+  font-family: monospace;
+  font-weight: bold;
+  color: rgba(121, 209, 176,0.8);
+  $transition-time: 4s;
+  transition: color $transition-time linear;
+    -moz-transition: color $transition-time linear;    /* FF3.7+ */
+    -o-transition: color $transition-time linear;      /* Opera 10.5 */
+    -webkit-transition: color $transition-time linear;
+}
+
+@for $i from 1 through length($links) {
+  #bg.bg-#{$i} {
+    $item: nth($links,$i);
+    color: nth($item,2);
+ }
+}
+#bg pre { display:none; }
+#bg pre {
+  position: absolute;
+  position: fixed;
+  z-index: 1;
+  top: -10px;
+  left: 400px;
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (max-width: 499px) {
+  #bg {
+    pre {
+      width: 100%;
+      height: 190px;
+      left: 0;
+
+      overflow: hidden;
+
+    }
+  }
+
+  article {
+    width: auto;
+    margin-top:100px;
+
+  }
+}

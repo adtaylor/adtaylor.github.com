@@ -9,6 +9,9 @@ module.exports = function( grunt ) {
 
     // Project configuration
     // ---------------------
+    server: {
+      port: 3502
+    },
 
     // specify an alternate install location for Bower
     bower: {
