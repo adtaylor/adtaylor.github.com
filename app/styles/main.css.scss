@@ -1,15 +1,15 @@
-/*
- * Lazy reset
- */
+// 
+// Quick and dirty reset
+// 
 html, body, pre {
   margin: 0;
   padding: 0;
 }
 
 
-/*
- * Content block
- */
+//
+// Content block
+//
 
 article{
   position:relative;
@@ -20,7 +20,6 @@ article{
   background-color: #fff;
   color: #333;
 }
-
 
 h1,p,ul,li {
   margin: 0 0 14px;
@@ -33,9 +32,6 @@ h1 {
   font-size: 20px;
   line-height: 40px;
 }
-
-
-
 
 a {
   padding: 2px;
@@ -88,6 +84,9 @@ a:hover, a:focus {
   height: 100%;
 }
 
+//
+// Small screen styles
+//
 @media all and (max-width: 499px) {
   #bg {
     pre {
